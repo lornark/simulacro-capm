@@ -1,18 +1,23 @@
 # Simulacro CAPM para iPhone
 
-Esta carpeta contiene una versión instalable como app web (PWA) del simulador. No requiere Mac ni App Store. Conserva el progreso en el almacenamiento local del navegador del iPhone.
+Simulador de práctica como aplicación web instalable (PWA). No requiere Mac ni App Store y guarda el progreso en el almacenamiento local del navegador.
 
-## Publicación necesaria
+El banco contiene **402 preguntas de práctica**: incluye 50 preguntas aportadas para el simulador y 50 casos nuevos. Las preguntas no son oficiales. Las referencias del banco y las tareas del ECO sirven para orientar el repaso; consulta también el ECO y los materiales actuales de PMI.
 
-Para instalarla desde Safari, los archivos deben estar publicados en una dirección HTTPS. Puedes subir el contenido de esta carpeta a un hosting estático, por ejemplo GitHub Pages, Netlify o Cloudflare Pages. El servicio worker no funciona al abrir `index.html` directamente desde el disco.
+## Publicar con GitHub Pages
 
-## Instalar en iPhone 11
+1. En GitHub, abre **Settings → Pages**.
+2. En **Build and deployment**, elige **Deploy from a branch**.
+3. Selecciona la rama `main` y la carpeta `/(root)`.
+4. Guarda los cambios y abre la dirección HTTPS que muestra GitHub Pages.
 
-1. Abre en Safari la dirección HTTPS publicada.
-2. Toca Compartir.
+No requiere instalación de dependencias ni proceso de compilación. La app usa `index.html`, `manifest.webmanifest`, `sw.js` y los íconos de `icons/`.
+
+## Instalar en iPhone
+
+1. Abre la dirección HTTPS publicada en Safari.
+2. Toca **Compartir**.
 3. Elige **Añadir a pantalla de inicio** y confirma.
-4. Abre **Simulacro CAPM** desde el nuevo ícono.
+4. Abre **Simulacro CAPM** desde el ícono.
 
-Después de la primera carga completa, la app puede abrirse sin conexión. Para recibir una versión nueva, abre la web con conexión una vez para que se actualice.
-
-La carpeta incluye `index.html`, `manifest.webmanifest`, `sw.js` y los íconos requeridos. Esto es una app web instalable, no un archivo nativo `.ipa` de App Store.
+Después de la primera carga completa, la app puede abrirse sin conexión. Para recibir una versión nueva, vuelve a abrirla con conexión para que actualice el caché.
